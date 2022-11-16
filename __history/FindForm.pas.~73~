@@ -1,0 +1,171 @@
+unit FindForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Mask,
+  Vcl.DBCtrls, Vcl.ComCtrls, Data.DB, Data.Win.ADODB, Vcl.Menus;
+
+type
+  TForm3 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Image1: TImage;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    StatusBar1: TStatusBar;
+    DBNavigator1: TDBNavigator;
+    OpenDialog1: TOpenDialog;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N21: TMenuItem;
+    ADOConnection1: TADOConnection;
+    ADODataSet1: TADODataSet;
+    DataSource1: TDataSource;
+    procedure FormActivate(Sender: TObject);
+    procedure ADODataSet1AfterScroll(DataSet: TDataSet);
+    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    procedure Image1Click(Sender: TObject);
+    procedure DBEdit4KeyPress(Sender: TObject; var Key: Char);
+    procedure N2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+const
+  aPath = 'D:\Desktop\Desktop\331_гр_ПЗ_28_Волков\source\';
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+uses Jpeg, IniFiles, StrUtils;
+
+procedure ShowImage(img: string);
+begin
+
+  if img = '' then
+    img := 'nobody.jpg';
+  try
+    Form3.Image1.Picture.LoadFromFile(aPath + 'images\' + img);
+  finally
+
+  end;
+end;
+
+procedure TForm3.ADODataSet1AfterScroll(DataSet: TDataSet);
+var
+  img: string;
+begin
+  if ADODataSet1.RecNo <> -1 then
+  begin
+    StatusBar1.Panels[0].Text := ' Запись: ' + IntToStr(ADODataSet1.RecNo);
+
+    if ADODataSet1.FieldValues['Picture'] <> Null then
+      img := ADODataSet1.FieldValues['Picture']
+    else
+      img := '';
+
+    ShowImage(img);
+  end
+  else
+    StatusBar1.Panels[0].Text := ' Новая запись'
+end;
+
+procedure TForm3.DBEdit4KeyPress(Sender: TObject; var Key: Char);
+begin
+  if (Key = #13) and (Length(DBEdit1.Text) > 0) then
+    ShowImage(aPath + DBEdit1.Text)
+  else
+    Image1.Visible := false;
+end;
+
+procedure TForm3.DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+begin
+  case Button of
+    nbInsert, nbDelete, nbEdit:
+      begin
+        DBEdit1.ReadOnly := false;
+        DBEdit2.ReadOnly := false;
+        DBEdit3.ReadOnly := false;
+        Image1.Enabled := True;
+        if Button = nbInsert then
+          ShowImage('nobody.jpg');
+      end;
+    nbPost, nbCancel:
+      begin
+        DBEdit1.ReadOnly := True;
+        DBEdit2.ReadOnly := True;
+        DBEdit3.ReadOnly := True;
+        Image1.Enabled := false;
+      end;
+  end;
+end;
+
+procedure TForm3.FormActivate(Sender: TObject);
+begin
+
+  try
+    Form3.ADOConnection1.Open;
+    Form3.ADODataSet1.Open;
+    Form3.StatusBar1.Panels[0].Text := ' Запись: 1';
+  except
+    on e: Exception do
+    begin
+      DBEdit1.Enabled := false;
+      DBEdit2.Enabled := false;
+      DBNavigator1.Enabled := false;
+      MessageDlg('Ошибка доступа к файлу БД: ' + aPath + 'db\contacts11.mdb',
+        mtError, [mbOk], 0);
+    end;
+  end;
+end;
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if ADODataSet1.State = dsEdit then
+  begin
+    ADODataSet1.UpdateBatch(arCurrent);
+  end;
+end;
+
+procedure TForm3.Image1Click(Sender: TObject);
+var
+  nFileName: string;
+begin
+  OpenDialog1.FileName := '*.jpg';
+
+  if OpenDialog1.Execute then
+  begin
+
+    nFileName := ExtractFileName(OpenDialog1.FileName);
+
+    CopyFile(PChar(OpenDialog1.FileName),
+      PChar(aPath + 'images\' + nFileName), false);
+    ShowImage(nFileName);
+    ADODataSet1.FieldValues['Picture'] := nFileName;
+
+  end;
+
+end;
+
+procedure TForm3.N2Click(Sender: TObject);
+begin
+  Form3.Close();
+end;
+
+end.

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.526,d:\Other\24 ИК\FindForm.pas=d:\Other\24 ИК\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.526,d:\Other\24 ИК\FindForm.dfm=d:\Other\24 ИК\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.385,d:\Other\24 ИК\Unit1.dfm=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.385,d:\Other\24 ИК\Unit1.pas=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.809,d:\Other\24 ИК\Project1.dproj=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.762,=d:\Other\24 ИК\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.539,=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.532,=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.745,=d:\Other\24 ИК\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.291,=d:\Other\24 ИК\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.235,=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.009,=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.938,=C:\Users\polin\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022.11.04 12:48:52.000.069,H:\Программные модули\!331_гр_ПЗ_28_Волков\Unit1.dfm=H:\Программные модули\!331_гр_ПЗ_28_Волков\MainUnit.dfm</Transaction>
+    <Transaction>2022.11.04 12:48:52.000.069,H:\Программные модули\!331_гр_ПЗ_28_Волков\Unit1.pas=H:\Программные модули\!331_гр_ПЗ_28_Волков\MainUnit.pas</Transaction>
+    <Transaction>2022.11.04 12:49:02.000.334,H:\Программные модули\!331_гр_ПЗ_28_Волков\FindForm.pas=H:\Программные модули\!331_гр_ПЗ_28_Волков\Editunit.pas</Transaction>
+    <Transaction>2022.11.04 12:49:02.000.334,H:\Программные модули\!331_гр_ПЗ_28_Волков\FindForm.dfm=H:\Программные модули\!331_гр_ПЗ_28_Волков\Editunit.dfm</Transaction>
+    <Transaction>2022.11.04 12:49:09.000.396,H:\Программные модули\!331_гр_ПЗ_28_Волков\Editunit.pas=H:\Программные модули\!331_гр_ПЗ_28_Волков\EditiUnit.pas</Transaction>
+    <Transaction>2022.11.04 12:49:09.000.396,H:\Программные модули\!331_гр_ПЗ_28_Волков\Editunit.dfm=H:\Программные модули\!331_гр_ПЗ_28_Волков\EditiUnit.dfm</Transaction>
+    <Transaction>2022.11.04 12:49:15.000.984,H:\Программные модули\!331_гр_ПЗ_28_Волков\EditiUnit.pas=H:\Программные модули\!331_гр_ПЗ_28_Волков\EditUnit.pas</Transaction>
+    <Transaction>2022.11.04 12:49:15.000.984,H:\Программные модули\!331_гр_ПЗ_28_Волков\EditiUnit.dfm=H:\Программные модули\!331_гр_ПЗ_28_Волков\EditUnit.dfm</Transaction>
+    <Transaction>2022.11.04 12:57:19.000.957,=H:\Программные модули\!331_гр_ПЗ_28_Волков\Unit1.pas</Transaction>
+    <Transaction>2022.11.04 12:57:30.000.192,H:\Программные модули\!331_гр_ПЗ_28_Волков\Unit1.pas=H:\Программные модули\!331_гр_ПЗ_28_Волков\GlobalUnit.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="EditUnit.pas"/>
+    <File Path="EditUnit.dfm"/>
+    <File Path="MainUnit.pas"/>
+    <File Path="MainUnit.dfm"/>
+    <File Path="GlobalUnit.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

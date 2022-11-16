@@ -1,0 +1,109 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Imaging.jpeg, Vcl.ExtCtrls,
+  Data.Win.ADODB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Menus, Vcl.Buttons,
+  Vcl.ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    DBGrid1: TDBGrid;
+    ADOConnection1: TADOConnection;
+    ADODataSet1: TADODataSet;
+    DataSource1: TDataSource;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N21: TMenuItem;
+    Header: TPanel;
+    Content: TPanel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    BitBtn1: TBitBtn;
+    procedure FormActivate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N21Click(Sender: TObject);
+    procedure DBGrid1TitleClick(Column: TColumn);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses FindForm;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ADODataSet1.Close;
+  ADODataSet1.CommandText := 'SELECT * FROM Contacts WHERE ' + 'Name Like ''%' + Edit1.Text + '%''';
+  ADODataSet1.Open;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  ADODataSet1.Close;
+  ADODataSet1.Filtered := False;
+  ADODataSet1.CommandText := 'SELECT * FROM contacts ORDER BY name';
+  ADODataSet1.Open;
+end;
+
+procedure TForm1.DBGrid1TitleClick(Column: TColumn);
+begin
+  ADODataSet1.Open;
+
+  if ADODataSet1.Sort = Column.FieldName + ' ASC' then
+    ADODataSet1.Sort := Column.FieldName + ' DESC'
+  else
+    ADODataSet1.Sort := Column.FieldName + ' ASC';
+end;
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+  try
+    ADOConnection1.Open();
+    ADODataSet1.Active := true;
+  except
+    on e: Exception do
+    begin
+      DBGrid1.Enabled := False;
+      MessageDlg('Ошибка доступа к бд! C:\Users\polin\OneDrive\Документы', mtError, [mbok], 0);
+    end;
+  end;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if (DBGrid1.EditorMode) then
+  begin
+    ADODataSet1.UpdateBatch(arCurrent);
+  end;
+end;
+
+procedure TForm1.N21Click(Sender: TObject);
+begin
+  Form3.ShowModal;
+end;
+
+procedure TForm1.N2Click(Sender: TObject);
+begin
+  Close;
+end;
+
+end.

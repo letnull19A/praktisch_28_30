@@ -1,0 +1,253 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1082#1086#1085#1090#1072#1082#1090#1099
+  ClientHeight = 388
+  ClientWidth = 558
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Header: TPanel
+    Left = 0
+    Top = 0
+    Width = 558
+    Height = 57
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clBtnShadow
+    ParentBackground = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 19
+      Top = 12
+      Width = 61
+      Height = 28
+      Caption = #1055#1086#1080#1089#1082' '#1087#1086' '#1080#1084#1077#1085#1080
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      WordWrap = True
+    end
+    object Edit1: TEdit
+      Left = 96
+      Top = 19
+      Width = 152
+      Height = 21
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 254
+      Top = 17
+      Width = 67
+      Height = 25
+      Caption = #1055#1086#1080#1089#1082
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object BitBtn1: TBitBtn
+      Left = 327
+      Top = 17
+      Width = 26
+      Height = 25
+      Glyph.Data = {
+        42040000424D4204000000000000420000002800000010000000100000000100
+        20000300000000040000000000000000000000000000000000000000FF0000FF
+        0000FF0000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000161F762F17207BEF17207BEF161F762F000000000000
+        0000000000000000000000000000161F762F18217AEF161F76EF161F762F0000
+        000000000000161F762F1B247CEF4F57C5FF313BBCFF17207BEF161F762F0000
+        00000000000000000000161F762F18217AEF343CAEFF343CAEFF18217AEF161F
+        762F000000001C257DEF5B63CCFF696BDEFF5A5DDAFF2B35BBFF17207BEF161F
+        762F00000000161F762F18217BEF323AB1FF393FD8FF393FD7FF343CAEFF1821
+        7AEF00000000161F76EF535CC1FF6D70E0FF6A69DFFF4B4ED7FF2A34BCFF1720
+        7BEF161F761F18217BEF2F38B5FF373DD9FF383DE8FF383ED8FF2D35A1FF161F
+        76EF00000000161F762F1C257DEF5D66CFFF6B6FE0FF6968DFFF3F42D5FF2934
+        BDFF192280FF2C36BAFF363BD7FF383BE4FF373DD9FF2B33A4FF161F76EF161F
+        762F0000000000000000161F762F1B247DEF5C64CFFF6A6DE0FF6261DDFF3639
+        D4FF2D38CFFF3439D6FF3739DFFF353BD8FF2832A8FF161F76EF161F762F0000
+        0000000000000000000000000000161F762F1B247DEF5A63D0FF686CE0FF5857
+        DBFF3536D6FF3737D9FF3338D7FF2630ABFF161F76EF161F762F000000000000
+        000000000000000000000000000000000000161F765F212A84FF6972E6FF676A
+        DFFF4C4BD8FF3536D6FF2A35CCFF17207BFF161F765F00000000000000000000
+        0000000000000000000000000000161F762F1C257EEF636CD6FF6875E3FF656E
+        DEFF6265DEFF3F3ED6FF3236D5FF2732C2FF17207CEF161F762F000000000000
+        00000000000000000000161F762F1D267EEF6E76DAFF7081E6FF6578DFFF6773
+        E3FF646DE3FF5A5EDEFF3938D4FF3235D5FF2631C3FF17207CEF161F762F0000
+        000000000000161F762F1E277EEF7981DEFF7F8FEAFF7186E2FF6E7FE6FF5F68
+        CAFF283185FF5C65D7FF4C50DCFF3635D4FF3135D6FF2531C4FF17207CEF161F
+        762F000000001F287EEF848CE1FF909DEEFF8295E6FF7E8DEAFF6A72CFFF1C25
+        79EF161F763F1B257ECF515BD3FF3E43D9FF3635D4FF3135D6FF2430C5FF1720
+        7CEF000000001F287EEF8990E2FF97A4F0FF8E9CEEFF767DCCFF1D267AEF161F
+        762F00000000161F761F1B247DEF4C56D3FF2F35D8FF2F34D7FF232FC7FF1720
+        7CEF00000000161F762F1F287EEF878FE3FF8288CAFF1E277AEF161F762F0000
+        00000000000000000000161F762F1A247DEF404BD2FF1F2DCCFF16207CEF161F
+        762F0000000000000000161F762F1F287BEF1F287BEF161F762F000000000000
+        0000000000000000000000000000161F762F1A237DEF1A237DEF161F762F0000
+        000000000000}
+      TabOrder = 2
+      OnClick = Button2Click
+    end
+  end
+  object Content: TPanel
+    Left = 0
+    Top = 57
+    Width = 558
+    Height = 331
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 1
+    object DBGrid1: TDBGrid
+      Left = 0
+      Top = 0
+      Width = 558
+      Height = 331
+      Align = alClient
+      BiDiMode = bdLeftToRight
+      BorderStyle = bsNone
+      DataSource = DataSource1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentBiDiMode = False
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnTitleClick = DBGrid1TitleClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Name'
+          Title.Alignment = taCenter
+          Title.Caption = #1080#1084#1103
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
+          Width = 175
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'Phone'
+          Title.Alignment = taCenter
+          Title.Caption = #1090#1077#1083#1077#1092#1086#1085
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
+          Width = 115
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'E-mail'
+          Title.Alignment = taCenter
+          Title.Caption = #1055#1086#1095#1090#1072
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
+          Width = 115
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Picture'
+          Title.Alignment = taCenter
+          Title.Caption = #1048#1079#1086#1073#1088#1072#1078#1077#1085#1080#1077
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
+          Width = 115
+          Visible = True
+        end>
+    end
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=D:\De' +
+      'sktop\Desktop\331_'#1075#1088'_'#1055#1047'_28_'#1042#1086#1083#1082#1086#1074'\source\db\contacts11.mdb;Mode=' +
+      'Share Deny None;Persist Security Info=False;Jet OLEDB:System dat' +
+      'abase="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password=' +
+      '"";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet' +
+      ' OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transacti' +
+      'ons=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System' +
+      ' Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don'#39't' +
+      ' Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica ' +
+      'Repair=False;Jet OLEDB:SFP=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 240
+    Top = 328
+  end
+  object ADODataSet1: TADODataSet
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Filtered = True
+    CommandText = 'SELECT * FROM Contacts'
+    Parameters = <>
+    Left = 272
+    Top = 328
+  end
+  object DataSource1: TDataSource
+    DataSet = ADODataSet1
+    Left = 304
+    Top = 328
+  end
+  object MainMenu1: TMainMenu
+    Left = 208
+    Top = 328
+    object N1: TMenuItem
+      Caption = #1060#1072#1081#1083
+      object N2: TMenuItem
+        Caption = #1042#1099#1093#1086#1076
+        OnClick = N2Click
+      end
+    end
+    object N3: TMenuItem
+      Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100' '#1041#1044
+      object N21: TMenuItem
+        Caption = #1055#1077#1088#1077#1093#1086#1076' '#1085#1072' 2 '#1092#1086#1088#1084#1091
+        OnClick = N21Click
+      end
+    end
+  end
+end
