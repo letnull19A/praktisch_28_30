@@ -13742,26 +13742,22 @@ object Form1: TForm1
     end
   end
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=H:\'#1055#1088 +
-      #1086#1075#1088#1072#1084#1084#1085#1099#1077' '#1084#1086#1076#1091#1083#1080'\!331_'#1075#1088'_'#1055#1047'_28_'#1042#1086#1083#1082#1086#1074'\Win32\Debug\source\db\cont' +
-      'acts11.mdb;Mode=Share Deny None;Persist Security Info=False;Jet ' +
-      'OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Da' +
-      'tabase Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Lo' +
-      'cking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Globa' +
-      'l Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLE' +
-      'DB:Create System Database=False;Jet OLEDB:Encrypt Database=False' +
-      ';Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact ' +
-      'Without Replica Repair=False;Jet OLEDB:SFP=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=.\sou' +
+      'rce\db\contacts.mdb;Mode=Share Deny None;Persist Security Info=F' +
+      'alse;Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet' +
+      ' OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Da' +
+      'tabase Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OL' +
+      'EDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="' +
+      '";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Datab' +
+      'ase=False;Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB' +
+      ':Compact Without Replica Repair=False;Jet OLEDB:SFP=False'
     LoginPrompt = False
-    Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 240
     Top = 328
   end
   object ADODataSet1: TADODataSet
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     Filtered = True

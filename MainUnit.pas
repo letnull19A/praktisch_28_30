@@ -158,16 +158,17 @@ end;
 
 procedure TForm1.FormActivate(Sender: TObject);
 begin
-  try
+  //try
+    ADOConnection1.Connected := true;
     ADOConnection1.Open();
     ADODataSet1.Active := true;
-  except
-    on e: Exception do
-    begin
-      DBGrid1.Enabled := False;
-      MessageDlg('Ошибка доступа к бд! ' + DB_PATH, mtError, [mbok], 0);
-    end;
-  end;
+  //except
+  //  on e: Exception do
+  //  begin
+  //    DBGrid1.Enabled := False;
+  //    MessageDlg('Ошибка доступа к бд! ' + DB_PATH, mtError, [mbok], 0);
+  //  end;
+  //end;
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
