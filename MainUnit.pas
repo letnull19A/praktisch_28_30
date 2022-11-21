@@ -198,8 +198,9 @@ begin
 
   try
     WordApp := CreateOleObject('Word.Application');
-    doc := WordApp.documents.Open(TEMPLATE_PATH);
-    WordApp.ActiveDocument.SaveAs(REPORT_PATH);
+    doc := WordApp.documents.Open(ExtractFilePath(Application.ExeName) + TEMPLATE_PATH);
+    WordApp.ActiveDocument.SaveAs(ExtractFilePath(Application.ExeName) + REPORT_PATH);
+
 
     for var i := 2 to ADODataSet1.RecordCount + 1 do
     begin

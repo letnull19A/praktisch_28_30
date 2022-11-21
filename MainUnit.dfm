@@ -13537,8 +13537,6 @@ object Form1: TForm1
     Color = clBtnShadow
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
     object Label1: TLabel
       Left = 19
       Top = 12
@@ -13578,9 +13576,6 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 1
-        ExplicitTop = 1
-        ExplicitHeight = 26
       end
       object Button1: TButton
         Left = 192
@@ -13597,9 +13592,6 @@ object Form1: TForm1
         ParentFont = False
         TabOrder = 1
         OnClick = Button1Click
-        ExplicitLeft = 193
-        ExplicitTop = 1
-        ExplicitHeight = 26
       end
       object BitBtn1: TBitBtn
         Left = 256
@@ -13645,8 +13637,6 @@ object Form1: TForm1
           000000000000}
         TabOrder = 2
         OnClick = Button2Click
-        ExplicitTop = 1
-        ExplicitHeight = 26
       end
     end
   end
